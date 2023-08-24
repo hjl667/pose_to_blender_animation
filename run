@@ -1,0 +1,1 @@
+FlASK_APP=app.py FlASK_ENV=development flask run

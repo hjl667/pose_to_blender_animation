@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="card-wrapper">
+
+    <div class="card">
+
+      <h1 class="center">Gallary</h1>
+      <p class="center">You are currently logged in.</p>
+
+      <div class="center">
+        <a href="/user/signout" class="btn btn--secondary">Sign Out</a>
+      </div>
+
+    </div>
+
+    <div class="card">
+      <h2 class="center">Your Studio</h2>
+
+      <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".bvh">
+        <input type="submit" value="Upload and Convert">
+      </form>
+
+      <button id="downloadButton" onclick="location.href='/download'">Download Animation</button>
+    </div>
+
+  </div>
+{% endblock %}
